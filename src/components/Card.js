@@ -1,15 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
 const Card = (props) => {
 
   const name = props.name;
-  const isFlipped = props.isFlipped;
   const pic = props.pic;
 
+  const [isFlipped, setIsFlipped] = useState(props.isFlipped);
+
+  const flip = () => {
+    setIsFlipped(!isFlipped);
+  }
+
   return(
-    <Container>
-      <Picture src={pic} />
+    <Container onClick={() => {flip()}}>
+      {
+        !isFlipped && (
+          <Picture src={pic} />
+        )
+      }
     </Container>
   )
 }

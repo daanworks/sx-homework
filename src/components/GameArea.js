@@ -21,7 +21,7 @@ const GameArea = () => {
         cardImages
           .sort(() => Math.random() - 0.5)
           .map((element) => (
-            <Card name={element.name} pic={element.pic} isFlipped={element.isFlipped} />
+            <Card name={element.name} pic={element.pic} isFlipped={element.isFlipped}/>
           ))
       }
     </Container>
