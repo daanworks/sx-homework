@@ -42,5 +42,5 @@ const Container = styled.div`
   row-gap: 10px;
   column-gap: 10px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `

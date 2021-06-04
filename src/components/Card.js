@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
-const Card = ({ card }) => {
+const Card = ({card}) => {
 
   const [isFlipped, setIsFlipped] = useState(false);
 
   const flip = () => {
-    setIsFlipped(!isFlipped);
+    setIsFlipped(!isFlipped)
   }
 
   return(

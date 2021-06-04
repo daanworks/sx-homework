@@ -4,6 +4,7 @@ import Display from "./Display";
 import GameArea from "./GameArea";
 
 const Main = () => {
+
   return(
     <Container>
       <Display />
