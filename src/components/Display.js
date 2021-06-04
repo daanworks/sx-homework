@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 const Display = () => {
+
+  const tries = useSelector(state => state.displayReducer.tries);
+
   return(
     <Container>
-      <p>Current tries: 1</p>
+      <p>Current tries: {tries}</p>
       <p>Best: 9</p>
       <p>Button</p>
     </Container>

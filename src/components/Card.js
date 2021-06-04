@@ -1,12 +1,16 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
 
 const Card = ({card}) => {
+
+  const dispatch = useDispatch();
 
   const [isFlipped, setIsFlipped] = useState(false);
 
   const flip = () => {
-    setIsFlipped(!isFlipped)
+    setIsFlipped(!isFlipped);
+    return dispatch({type: 'INCREASE'});
   }
 
   return(
