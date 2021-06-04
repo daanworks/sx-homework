@@ -5,10 +5,12 @@ import {images} from "../data/cards";
 
 const GameArea = () => {
 
-  const [cardImages, setCardImages] = useState([]);
+  const [cards, setCards] = useState([]);
+  const [openCards, setOpenCards] = useState([]);
+  const [moves, setMoves] = useState(0);
 
   const duplicateImages = () => {
-    setCardImages(images.concat(images));
+    setCards(images.concat(images));
   }
 
   useEffect(() => {
@@ -18,10 +20,13 @@ const GameArea = () => {
   return(
     <Container>
       {
-        cardImages
+        cards
           .sort(() => Math.random() - 0.5)
-          .map((element) => (
-            <Card name={element.name} pic={element.pic} isFlipped={element.isFlipped}/>
+          .map((card, index) => (
+            <Card
+              key={index}
+              card={card}
+            />
           ))
       }
     </Container>
