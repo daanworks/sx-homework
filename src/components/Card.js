@@ -12,7 +12,7 @@ const Card = () => {
 export default Card;
 
 const Container = styled.div`
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   border: 1px solid black;
 `
