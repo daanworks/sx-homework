@@ -1,5 +1,6 @@
 const initialState = {
   tries : 0,
+  best: 0,
 }
 
 const displayReducer = (state = initialState, action) => {
@@ -9,6 +10,11 @@ const displayReducer = (state = initialState, action) => {
       return {
         ...state,
         tries: state.tries + 1,
+      }
+    case 'RESTART':
+      return {
+        ...state,
+        tries: 0,
       }
     default:
       return state;

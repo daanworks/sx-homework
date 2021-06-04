@@ -29,7 +29,9 @@ export default Card;
 const Container = styled.div`
   height: 150px;
   width: 150px;
-  border: 1px solid black;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.25);
   display: flex;
   align-items: center;
   justify-content: center;

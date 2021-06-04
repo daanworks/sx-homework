@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from 'react-router-dom';
 
 const Header = () => {
+
+  const history = useHistory();
+
   return(
     <Container>
-      <Logo src={require(`../images/splendex-logo.svg`).default} />
+      <Logo src={require(`../images/splendex-logo.svg`).default} onClick={() => {history.push('/')}} />
     </Container>
   )
 }
@@ -23,4 +27,5 @@ const Logo = styled.img`
   height: 50px;
   background: transparent;
   margin-left: 10px;
+  cursor: pointer;
 `

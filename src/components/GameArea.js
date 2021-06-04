@@ -7,7 +7,6 @@ const GameArea = () => {
 
   const [cards, setCards] = useState([]);
   const [openCards, setOpenCards] = useState([]);
-  const [moves, setMoves] = useState(0);
 
   const duplicateImages = () => {
     setCards(images.concat(images));
@@ -36,11 +35,11 @@ const GameArea = () => {
 export default GameArea;
 
 const Container = styled.div`
-  width: 66%;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
   column-gap: 10px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 `
